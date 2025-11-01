@@ -11,7 +11,7 @@ import main.java.benj.renderer.Render;
  * window(s), etc). User input is managed by this module, this includes
  * mapping key strokes back to objects in the game world, etc.
  */
-public class App extends JFrame {
+public class App {
     public App() {
         new Render();
     }

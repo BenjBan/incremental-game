@@ -8,7 +8,7 @@ import javax.swing.JLabel;
  * It sets up the graphical user interface for the game, including
  * displaying text, images, and other visual elements.
  */
-public class Render {
+public class Render extends JFrame {
     public Render() {
         JLabel label = new JLabel("Welcome to the Incremental Game!");
         label.setHorizontalAlignment(JLabel.CENTER);
