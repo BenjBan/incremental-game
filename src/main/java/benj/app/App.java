@@ -3,15 +3,16 @@ package main.java.benj.app;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import main.java.benj.renderer.Render;
+
+/*
+ * This module is responsible for managing the functionality of the game
+ * (e.g. starting new games, loading/saving games, managing the application
+ * window(s), etc). User input is managed by this module, this includes
+ * mapping key strokes back to objects in the game world, etc.
+ */
 public class App extends JFrame {
     public App() {
-        JLabel label = new JLabel("Welcome to the Incremental Game!");
-        label.setHorizontalAlignment(JLabel.CENTER);
-
-        setTitle("Incremental Game");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500, 500);
-        add(label);
-        setVisible(true);
+        new Render();
     }
 }
