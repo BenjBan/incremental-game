@@ -32,17 +32,17 @@ public class TitleScreen extends Screen {
         gbc.insets = new Insets(10, 10, 10, 10);
 
         // 1. Game Title
-        JLabel label = new JLabel("Welcome to the Incremental Game!");
-        label.setFont(new Font("Roboto-Mono", Font.PLAIN, 24));
+        JLabel label = new JLabel("Incremental Game!");
+        label.setFont(new Font("Roboto", Font.PLAIN, 24));
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.CENTER);
-        gbc.gridy = 0;
         gbc.gridx = 0;
+        gbc.gridy = 0;
         add(label, gbc);
 
         // 2. Start Button
         startButton.setPreferredSize(new Dimension(150, 50));
-        startButton.setFont(new Font("Roboto-Mono", Font.PLAIN, 12));
+        startButton.setFont(new Font("Roboto", Font.PLAIN, 12));
         startButton.setForeground(Color.WHITE);
         startButton.setBackground(new Color(22, 111, 198));
         startButton.setOpaque(true);
@@ -54,8 +54,8 @@ public class TitleScreen extends Screen {
                 System.out.println("Start Game button clicked!");
             }
         });
-        gbc.gridy = 1;
         gbc.gridx = 0;
+        gbc.gridy = 1;
         add(startButton, gbc);
     }
 
