@@ -17,7 +17,8 @@ public class AppTheme {
                         COLOR_UNAVAILABLE = new Color(144, 144, 144),
                         COLOR_UNAVAILABLE2 = new Color(144, 144, 144, 128),
                         COLOR_VALID = new Color(87, 165, 80),
-                        COLOR_INVALID = new Color(255, 71, 74);
+                        COLOR_INVALID = new Color(255, 71, 74),
+                        COLOR_NONE = new Color(0, 0, 0, 0);
 
         // -- Fonts --
         public static final String FONT_FAMILY = "Roboto";
@@ -32,5 +33,5 @@ public class AppTheme {
 
         // -- Border Radius --
         public static final int BORDER_RADIUS = 16,
-                        BORDER_RADIUS_FULL = 999;
+                        BORDER_RADIUS_MAX = 999;
 }

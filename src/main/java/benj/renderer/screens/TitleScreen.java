@@ -1,9 +1,5 @@
 package benj.renderer.screens;
 
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -13,15 +9,19 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
+import benj.renderer.ui.AppTheme;
+import benj.renderer.ui.components.Button;
+
 /*
 * Title screen for the Incremental Game.
 * Displays the game title and a start button.
 */
 public class TitleScreen extends Screen {
-    JButton startButton = new JButton("Start Game".toUpperCase());
+    JButton startButton = new Button("Start Game", AppTheme.COLOR_INVALID, AppTheme.COLOR_INVALID,
+            AppTheme.BORDER_RADIUS_MAX, 16, 32, 16, 32);
 
     public TitleScreen() {
-        setBackground(Color.WHITE);
+        setBackground(AppTheme.COLOR_SECONDARY);
 
         JPanel titlePanel = new JPanel();
         titlePanel.setLayout(new GridBagLayout());
@@ -29,11 +29,12 @@ public class TitleScreen extends Screen {
         setLayout(new GridBagLayout());
 
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.insets = new Insets(16, 16, 16, 16);
 
         // 1. Game Title
-        JLabel label = new JLabel("Incremental Game!");
-        label.setFont(new Font("Roboto", Font.PLAIN, 24));
+        JLabel label = new JLabel("Incremental Game");
+        label.setFont(AppTheme.FONT_HEADING);
+        label.setForeground(AppTheme.COLOR_TEXT);
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.CENTER);
         gbc.gridx = 0;
@@ -41,26 +42,13 @@ public class TitleScreen extends Screen {
         add(label, gbc);
 
         // 2. Start Button
-        startButton.setPreferredSize(new Dimension(150, 50));
-        startButton.setFont(new Font("Roboto", Font.PLAIN, 12));
-        startButton.setForeground(Color.WHITE);
-        startButton.setBackground(new Color(22, 111, 198));
-        startButton.setOpaque(true);
-        startButton.setContentAreaFilled(true);
-        startButton.setBorder(null);
-        startButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        startButton.addActionListener(e -> {
-            if (e.getSource() == startButton) {
-                System.out.println("Start Game button clicked!");
-            }
-        });
         gbc.gridx = 0;
         gbc.gridy = 1;
         add(startButton, gbc);
     }
 
     /*
-     * @param listener The action for the start button.
+     * @param The action for the start button.
      */
     public void addStartGameListener(ActionListener listener) {
         startButton.addActionListener(listener);
