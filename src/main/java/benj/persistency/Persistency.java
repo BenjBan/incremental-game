@@ -1,4 +1,4 @@
-package main.java.benj.persistency;
+package benj.persistency;
 
 /*
  * This module is responsible for saving and loading the current game state to and from

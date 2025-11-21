@@ -1,4 +1,4 @@
-package main.java.benj.renderer;
+package benj.renderer;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -8,7 +8,7 @@ import java.awt.Taskbar;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 
-import main.java.benj.renderer.screens.*;
+import benj.renderer.screens.*;
 
 /*
  * This module is responsible for rendering the game window and its contents.

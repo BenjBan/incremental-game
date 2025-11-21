@@ -1,4 +1,4 @@
-package test.java.benj.recorder;
+package benj.recorder;
 
 public class RecorderTest {
 

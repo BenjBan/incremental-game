@@ -1,4 +1,4 @@
-package test.java.benj.fuzz;
+package benj.fuzz;
 
 public class FuzzTest {
 

@@ -1,9 +1,6 @@
-package main.java.benj.app;
+package benj.app;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-
-import main.java.benj.renderer.Render;
+import benj.renderer.Render;
 
 /*
  * This module is responsible for managing the functionality of the game

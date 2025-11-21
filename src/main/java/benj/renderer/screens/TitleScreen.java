@@ -1,4 +1,4 @@
-package main.java.benj.renderer.screens;
+package benj.renderer.screens;
 
 import java.awt.Color;
 import java.awt.Cursor;

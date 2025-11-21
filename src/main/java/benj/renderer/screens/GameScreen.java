@@ -1,4 +1,4 @@
-package main.java.benj.renderer.screens;
+package benj.renderer.screens;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;

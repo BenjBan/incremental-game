@@ -1,6 +1,4 @@
-package main.java.benj.renderer.screens;
-
-import java.awt.BorderLayout;
+package benj.renderer.screens;
 
 import javax.swing.JPanel;
 

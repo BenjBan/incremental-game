@@ -1,4 +1,4 @@
-package main.java.benj.recorder;
+package benj.recorder;
 
 /*
  * This module is responsible for saving and loading game data.

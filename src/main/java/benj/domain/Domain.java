@@ -1,4 +1,4 @@
-package main.java.benj.domain;
+package benj.domain;
 
 /*
  * This module is responsible for representing and maintaining the 

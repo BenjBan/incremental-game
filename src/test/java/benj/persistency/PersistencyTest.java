@@ -1,4 +1,4 @@
-package test.java.benj.persistency;
+package benj.persistency;
 
 public class PersistencyTest {
 
