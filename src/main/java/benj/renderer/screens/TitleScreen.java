@@ -21,15 +21,11 @@ public class TitleScreen extends Screen {
             AppTheme.BORDER_RADIUS_MAX, 16, 32, 16, 32);
 
     public TitleScreen() {
-        setBackground(AppTheme.COLOR_SECONDARY);
-
-        JPanel titlePanel = new JPanel();
-        titlePanel.setLayout(new GridBagLayout());
-        add(titlePanel, "titlePanel");
-        setLayout(new GridBagLayout());
-
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(16, 16, 16, 16);
+        JPanel titlePanel = new JPanel();
+        titlePanel.setLayout(new GridBagLayout());
+        add(titlePanel, gbc);
 
         // 1. Game Title
         JLabel label = new JLabel("Incremental Game");

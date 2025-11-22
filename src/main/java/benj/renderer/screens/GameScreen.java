@@ -1,10 +1,8 @@
 package benj.renderer.screens;
 
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Font;
+
+import benj.renderer.ui.AppTheme;
 
 /*
  * Game screen for the Incremental Game.
@@ -12,11 +10,14 @@ import java.awt.Font;
  */
 public class GameScreen extends Screen {
     public GameScreen() {
-        setBackground(Color.LIGHT_GRAY);
+        JLabel header = new JLabel("Game Screen - Under Construction"),
+                display = new JLabel("display"),
+                content = new JLabel("Game content will appear here."),
+                footer = new JLabel("Footer Information");
 
-        JLabel label = new JLabel("Game Screen - Under Construction");
-        label.setFont(new Font("Roboto-Mono", Font.PLAIN, 24));
-        label.setHorizontalAlignment(JLabel.CENTER);
-        add(label, BorderLayout.CENTER);
+        addContainer(header, 0);
+        addContainer(display, 1);
+        addContainer(content, 2, true);
+        addContainer(footer, 3);
     }
 }
