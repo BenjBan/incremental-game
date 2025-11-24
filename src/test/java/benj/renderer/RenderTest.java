@@ -1,4 +1,4 @@
-package test.java.benj.renderer;
+package benj.renderer;
 
 public class RenderTest {
 

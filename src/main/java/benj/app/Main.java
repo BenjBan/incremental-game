@@ -1,6 +1,4 @@
-package main.java.benj.app;
-
-import javax.swing.JFrame;
+package benj.app;
 
 public class Main {
     public static void main(String[] args) {

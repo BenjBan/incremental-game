@@ -1,4 +1,4 @@
-package test.java.benj.domain;
+package benj.domain;
 
 public class DomainTest {
 

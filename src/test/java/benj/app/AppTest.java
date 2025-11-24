@@ -1,4 +1,4 @@
-package test.java.benj.app;
+package benj.app;
 
 public class AppTest {
 
