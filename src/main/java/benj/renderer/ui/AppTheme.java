@@ -28,10 +28,10 @@ public class AppTheme {
                         FONT_SIZE_SMALL = 16;
         public static final Font FONT_HEADING = new Font(FONT_FAMILY, Font.BOLD, FONT_SIZE_HEADING),
                         FONT_SUB_HEADING = new Font(FONT_FAMILY, Font.BOLD, FONT_SIZE_SUB_HEADING),
-                        FONT_NORMAL = new Font(FONT_FAMILY, Font.PLAIN, FONT_SIZE_NORMAL),
-                        FONT_SMALL = new Font(FONT_FAMILY, Font.PLAIN, FONT_SIZE_SMALL);
+                        FONT_NORMAL = new Font(FONT_FAMILY, Font.BOLD, FONT_SIZE_NORMAL),
+                        FONT_SMALL = new Font(FONT_FAMILY, Font.BOLD, FONT_SIZE_SMALL);
 
         // -- Border Radius --
-        public static final int BORDER_RADIUS = 16,
+        public static final int BORDER_RADIUS = 64,
                         BORDER_RADIUS_MAX = 999;
 }

@@ -1,7 +1,7 @@
 package benj.renderer.screens;
 
 import javax.swing.JPanel;
-import javax.swing.JLabel;
+import javax.swing.JComponent;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 
@@ -25,7 +25,7 @@ public abstract class Screen extends JPanel {
      * 
      * @param the fixed height of the container
      */
-    protected void addContainer(JLabel container, int gridx, int gridy, boolean isDynamic, int height) {
+    protected void addContainer(JComponent container, int gridx, int gridy, boolean isDynamic, int height) {
         gbc.gridx = gridx;
         gbc.gridy = gridy;
         gbc.weightx = 1;
@@ -39,11 +39,11 @@ public abstract class Screen extends JPanel {
         add(container, gbc);
     }
 
-    protected void addContainer(JLabel container, int gridy, boolean isDynamic) {
+    protected void addContainer(JComponent container, int gridy, boolean isDynamic) {
         addContainer(container, 0, gridy, isDynamic, 0);
     }
 
-    protected void addContainer(JLabel container, int gridy) {
+    protected void addContainer(JComponent container, int gridy) {
         addContainer(container, gridy, false);
     }
 

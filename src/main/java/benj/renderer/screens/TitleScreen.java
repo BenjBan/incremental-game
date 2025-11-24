@@ -17,7 +17,7 @@ import benj.renderer.ui.components.Button;
 * Displays the game title and a start button.
 */
 public class TitleScreen extends Screen {
-    JButton startButton = new Button("Start Game", AppTheme.COLOR_INVALID, AppTheme.COLOR_INVALID,
+    JButton startButton = new Button("Start Game", AppTheme.COLOR_VALID, AppTheme.COLOR_VALID,
             AppTheme.BORDER_RADIUS_MAX, 16, 32, 16, 32);
 
     public TitleScreen() {

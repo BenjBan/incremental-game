@@ -62,13 +62,8 @@ public class RoundedBorder implements Border {
         // Calculate actual radius for pill shape if needed
         int actualRadius = radius;
         if (radius >= 999) { // Using the 999 constant for pill shape
-            actualRadius = height / 2;
+            actualRadius = height;
         }
-
-        // 1. FILL THE BACKGROUND: Fill the area with the button's background color
-        // The Component c is your JButton instance
-        g2.setColor(c.getBackground());
-        g2.fillRoundRect(x, y, width - 1, height - 1, actualRadius, actualRadius);
 
         // 2. DRAW THE BORDER: Draw the outline with the specified border color
         g2.setColor(color);
