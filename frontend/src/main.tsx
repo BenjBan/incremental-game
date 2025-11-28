@@ -1,15 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import TopNavBar from './components/TopNavBar'
-import './css/global.css'
-import './css/index.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Title from './pages/Title/Title'
+import World1 from './pages/World1/World1'
+import './global.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <TopNavBar />
-    <div style={{ padding: '20px' }}>
-        <h1>Welcome to the Incremental Game</h1>
-        <p>This is now running with React + Vite!</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Title />} />
+        <Route path="/world1" element={<World1 />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
 )
