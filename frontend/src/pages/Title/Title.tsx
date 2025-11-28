@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import './Title.css'
+import './Title.scss'
 
 export default function Title() {
     const navigate = useNavigate()

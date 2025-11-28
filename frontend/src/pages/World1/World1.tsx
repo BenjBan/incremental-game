@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import TopNavBar from '../../components/TopNavBar/TopNavBar'
-import './World1.css'
+import './World1.scss'
 
 export default function World1() {
     const navigate = useNavigate()
