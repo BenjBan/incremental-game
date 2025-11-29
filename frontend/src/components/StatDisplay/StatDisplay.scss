@@ -1,0 +1,21 @@
+@import '../../global.scss';
+
+.stat-display {
+    @include flex-center(column, none);
+    gap: 0.5rem;
+    padding: 0.5rem;
+
+    .money {
+        @include flex-center;
+    }
+
+    .stats {
+        @include flex-center;
+
+        .stat {
+            flex: 1;
+            @include flex-center;
+            font-size: $font-size-small;
+        }
+    }
+}

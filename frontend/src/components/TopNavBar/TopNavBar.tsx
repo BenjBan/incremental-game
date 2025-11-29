@@ -5,7 +5,7 @@ export default function TopNavBar() {
     return (
         <nav className="top-nav-bar">
             <div className="nav-content">
-                <h1>Incremental Game</h1>
+                <h2>Incremental Game</h2>
                 <ul className="nav-links">
                     <li><Link to="/world1">World 1</Link></li>
                     <li><Link to="/world2">World 2</Link></li>

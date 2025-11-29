@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import TopNavBar from '../../components/TopNavBar/TopNavBar'
+import StatDisplay from '../../components/StatDisplay/StatDisplay'
 import BottomNavBar from '../../components/BottomNavBar/BottomNavBar'
 import './World1.scss'
 
@@ -16,6 +17,7 @@ export default function World1() {
                 <TopNavBar />
             </header>
             <div className="stats-display">
+                <StatDisplay />
             </div>
             <div className="content">
                 {/* temporary button for testing */}

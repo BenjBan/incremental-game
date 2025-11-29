@@ -59,6 +59,13 @@ $transition-normal: 0.3s ease;
     transition: opacity $transition-fast;
 }
 
+@mixin flex-center($direction: row, $align-items: center, $justify-content: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
 // ============================================
 // Global Styles
 // ============================================
@@ -80,6 +87,7 @@ body {
     font-size: $font-size-normal;
     font-family: $font-family;
     font-weight: bold;
+    word-break: break-all;
     line-height: 1.3;
     scroll-behavior: smooth;
     min-height: 100vh;

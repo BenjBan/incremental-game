@@ -11,14 +11,10 @@
 }
 
 .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: top;
+    @include flex-center($align-items: top);
     height: 8rem;
 }
