@@ -1,0 +1,31 @@
+@import '../../global.scss';
+
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: $spacing-md;
+    width: 100vw;
+    overflow-x: auto;
+    touch-action: pan-x;
+
+    padding: 0 calc(50vw - 10rem);
+    
+    // Hide scrollbar for Chrome, Safari and Opera
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    // Hide scrollbar for IE, Edge and Firefox
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+    scroll-snap-type: x mandatory;
+    
+    cursor: grab;
+    user-select: none;
+
+    &.is-dragging {
+        cursor: grabbing;
+        scroll-snap-type: none;
+    }
+}

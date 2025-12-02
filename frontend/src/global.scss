@@ -30,8 +30,12 @@ $spacing-md: 2rem;     // 32px
 $spacing-lg: 4rem;     // 64px
 
 // Border Radius (using rem for scalability)
-$border-radius: 4rem;      // 64px
+$border-radius: 1rem;      // 16px
+$border-radius-lg: 4rem;      // 64px
 $border-radius-max: 999px;
+
+// Border weights
+$border-weight: 2px;
 
 // Transitions
 $transition-fast: 0.15s ease;

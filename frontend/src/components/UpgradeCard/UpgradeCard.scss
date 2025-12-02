@@ -1,0 +1,57 @@
+@import '../../global.scss';
+
+.upgrade-card {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primary;
+    border-radius: $border-radius;
+    padding: $spacing-xs;
+
+    .header {
+        width: 20rem;
+        height: 6.625rem;
+        border: $border-weight solid $color-text;
+        border-radius: $border-radius;
+        display: grid;
+        grid-template-rows: auto;
+        align-items: center;
+        padding: $spacing-xs;
+
+        p {
+            @include flex-center;
+        }
+    }
+    
+    .details {
+        border: $border-weight solid $color-text;
+        border-radius: $border-radius;
+        height: 18.5rem; //245px
+        padding: $spacing-xs;
+        font-size: $font-size-small;
+
+        display: grid;
+        grid-template-rows: 1fr auto;
+        
+        .description {
+            font-size: $font-size-small;
+            font-weight: normal;
+
+            @include flex-center;
+        }
+
+        .stats {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+    }
+
+    button {
+        @include button-base;
+        background-color: $color-valid;
+        border-radius: $border-radius-max;
+        // 35px height
+        padding: 0.5rem 0;
+        font-size: $font-size-small;
+    }
+}
