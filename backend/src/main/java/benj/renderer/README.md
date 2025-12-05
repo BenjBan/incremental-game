@@ -1,0 +1,1 @@
+renderer module was meant to create the GUI for the game. However, it is not used in the final product. It is left here for reference or as a backup. The GUI is handled by the frontend module/package. The renderer module may be delted in a later update.

@@ -1,15 +1,11 @@
 package benj.app;
 
-import benj.renderer.Render;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/*
- * This module is responsible for managing the functionality of the game
- * (e.g. starting new games, loading/saving games, managing the application
- * window(s), etc). User input is managed by this module, this includes
- * mapping key strokes back to objects in the game world, etc.
- */
+@SpringBootApplication
 public class App {
-    public App() {
-        new Render();
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
     }
 }
