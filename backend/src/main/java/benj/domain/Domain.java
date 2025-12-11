@@ -6,6 +6,9 @@ package benj.domain;
  * allowed to change the state of those objects. This module is not concerned with how
  * the game is displayed or stored.
  */
-public class Domain {
+public record Domain(Player player) {
+    public Domain() {
+        this(new Player());
+    }
 
 }

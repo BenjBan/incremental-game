@@ -8,6 +8,8 @@ type UpgradeCardProps = {
     income?: number;
     speed?: number;
     cost?: string;
+    canAfford?: boolean;
+    onBuy?: () => void;
 }
 
 export default function UpgradeCard({ 
@@ -17,8 +19,16 @@ export default function UpgradeCard({
     level = 0,
     income = 0,
     speed = 1.0,
-    cost = 'Free'
+    cost = 'Free',
+    canAfford = true,
+    onBuy
 }: UpgradeCardProps) {
+    const handleClick = () => {
+        if (onBuy && canAfford) {
+            onBuy()
+        }
+    }
+
     return (
         <div className="upgrade-card">
             <div className="header">
@@ -35,7 +45,13 @@ export default function UpgradeCard({
                     <p className="speed">Speed: {speed.toFixed(1)} seconds</p>
                 </div>
             </div>
-            <button className="cost">{cost}</button>
+            <button 
+                className={`cost ${!canAfford ? 'disabled' : ''}`}
+                onClick={handleClick}
+                disabled={!canAfford}
+            >
+                {cost}
+            </button>
         </div>
     )
 }

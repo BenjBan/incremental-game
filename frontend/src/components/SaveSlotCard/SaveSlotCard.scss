@@ -1,0 +1,105 @@
+@import "../../global.scss";
+
+.save-slot-card {
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &.empty {
+    cursor: pointer;
+    transition: opacity $transition-fast;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    .corner {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      border-color: $color-text;
+      border-style: solid;
+      border-width: 0;
+      border-radius: 0.5rem;
+
+      &.top-left {
+        top: 0;
+        left: 0;
+        border-top-width: 4px;
+        border-left-width: 4px;
+      }
+
+      &.top-right {
+        top: 0;
+        right: 0;
+        border-top-width: 4px;
+        border-right-width: 4px;
+      }
+
+      &.bottom-left {
+        bottom: 0;
+        left: 0;
+        border-bottom-width: 4px;
+        border-left-width: 4px;
+      }
+
+      &.bottom-right {
+        bottom: 0;
+        right: 0;
+        border-bottom-width: 4px;
+        border-right-width: 4px;
+      }
+    }
+
+    .add-icon {
+      font-size: 3rem;
+      color: $color-text;
+      line-height: 1;
+    }
+
+    .add-text {
+      color: $color-text;
+      font-size: $font-size-small;
+      margin-top: $spacing-xs;
+    }
+  }
+
+  &.filled {
+    background-color: $color-primary;
+    border-radius: $border-radius;
+    padding: $spacing-sm;
+    gap: $spacing-xs;
+
+    .slot-number {
+      font-size: $font-size-small;
+      opacity: 0.8;
+    }
+
+    .slot-name {
+      font-size: $font-size-normal;
+    }
+
+    .slot-info {
+      font-size: 0.875rem;
+      font-weight: normal;
+      opacity: 0.9;
+      text-align: left;
+      width: 100%;
+
+      p {
+        margin: 0.125rem 0;
+      }
+    }
+
+    .play-button {
+      background-color: $color-valid;
+      width: 100%;
+      margin-top: auto;
+      padding: $spacing-xs;
+    }
+  }
+}

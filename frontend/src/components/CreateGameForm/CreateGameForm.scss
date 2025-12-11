@@ -1,0 +1,64 @@
+@import '../../global.scss';
+
+.create-game-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-md;
+    
+    h1 {
+        color: $color-text;
+    }
+    
+    .form-field {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        
+        label {
+            color: $color-text;
+            font-size: $font-size-normal;
+        }
+        
+        input {
+            padding: $spacing-xs $spacing-sm;
+            border-radius: $border-radius-max;
+            border: 1px solid $color-text;
+            background-color: $color-text;
+            color: $color-text-dark;
+            font-size: $font-size-small;
+            font-family: $font-family;
+            min-width: 12rem;
+            
+            &::placeholder {
+                color: $color-unavailable;
+            }
+            
+            &:focus {
+                outline: none;
+                border-color: $color-valid;
+            }
+        }
+    }
+    
+    .form-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+        
+        button {
+            min-width: 8rem;
+            padding: $spacing-sm $spacing-md;
+            border-radius: $border-radius-max;
+        }
+        
+        .play-button {
+            background-color: $color-valid;
+        }
+        
+        .return-button {
+            background-color: $color-invalid;
+        }
+    }
+}

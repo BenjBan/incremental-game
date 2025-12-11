@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect, MouseEvent } from 'react'
+import { useGame } from '../../context/GameContext'
 import './Carousel.scss'
 import UpgradeCard from '../UpgradeCard/UpgradeCard'
 
@@ -7,6 +8,7 @@ export default function Carousel() {
     const [isDragging, setIsDragging] = useState(false)
     const [startX, setStartX] = useState(0)
     const [scrollLeft, setScrollLeft] = useState(0)
+    const { upgrades, money, buyUpgrade } = useGame()
 
     useEffect(() => {
         const carousel = carouselRef.current
@@ -54,6 +56,10 @@ export default function Carousel() {
         carouselRef.current.scrollLeft = scrollLeft - walk
     }
 
+    const handleBuyUpgrade = async (upgradeId: number) => {
+        await buyUpgrade(upgradeId)
+    }
+
     return (
         <div 
             className={`carousel ${isDragging ? 'is-dragging' : ''}`}
@@ -63,33 +69,20 @@ export default function Carousel() {
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
         >
-            <UpgradeCard title="Upgrade 1" money={0} 
-            description="Automatically gain +$1 per second" 
-            level={1} income={1} speed={1} cost="Free"/>
-            
-            <UpgradeCard title="Upgrade 2" money={0} 
-            description="Automatically gain +$2 per second" 
-            level={1} income={2} speed={1} cost="Free"/>
-            
-            <UpgradeCard title="Upgrade 3" money={0} 
-            description="Automatically gain +$3 per second" 
-            level={1} income={3} speed={1} cost="Free"/>
-            
-            <UpgradeCard title="Upgrade 4" money={0} 
-            description="Automatically gain +$4 per second" 
-            level={1} income={4} speed={1} cost="Free"/>
-            
-            <UpgradeCard title="Upgrade 5" money={0} 
-            description="Automatically gain +$5 per second" 
-            level={1} income={5} speed={1} cost="Free"/>
-            
-            <UpgradeCard title="Upgrade 6" money={0} 
-            description="Automatically gain +$6 per second" 
-            level={1} income={6} speed={1} cost="Free"/>
-            
-            <UpgradeCard title="Upgrade 7" money={0} 
-            description="Automatically gain +$7 per second" 
-            level={1} income={7} speed={1} cost="Free"/>
+            {upgrades.map(upgrade => (
+                <UpgradeCard 
+                    key={upgrade.id}
+                    title={upgrade.name}
+                    money={upgrade.incomePerSecond}
+                    description={upgrade.description}
+                    level={upgrade.level}
+                    income={upgrade.income}
+                    speed={upgrade.speed}
+                    cost={upgrade.costDisplay}
+                    canAfford={money >= upgrade.cost}
+                    onBuy={() => handleBuyUpgrade(upgrade.id)}
+                />
+            ))}
         </div>
     )
 }

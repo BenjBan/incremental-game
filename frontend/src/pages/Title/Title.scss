@@ -7,7 +7,18 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    gap: $spacing-md;
+    gap: $spacing-lg;
+    
+    h1 {
+        color: $color-text;
+    }
+}
+
+.slots-container {
+    display: flex;
+    gap: $spacing-lg;
+    justify-content: center;
+    align-items: center;
 }
 
 .play-button {
